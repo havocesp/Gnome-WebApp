@@ -26,7 +26,6 @@ Icon={namelower}
 Terminal=false
 Type=Application
 Categories=Network;'''.format(name=name, namelower=name.lower(), url=url)
-
-	f = open('applications/%s-web.desktop' % s.lower(), 'w')
-	f.write(text)
-	f.close
+	with open('applications/%s-web.desktop' % s.lower(), 'w') as f:
+		f.write(text)
+		f.close
